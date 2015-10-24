@@ -10,7 +10,7 @@ Once a Carbon server starts it will query container IP addresses in the given cl
 1. Apply Carbon kernel patch0012. This includes a modification in the Carbon Core component for
 allowing to add third party membership schemes.
 
-2. Copy following JAR files to the dropins directory of the Carbon server:
+2. Copy following JAR files to the repository/components/lib directory of the Carbon server:
 
 ```
 jackson-core-2.5.4.jar
