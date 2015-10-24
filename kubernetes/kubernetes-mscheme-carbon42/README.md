@@ -12,21 +12,21 @@ allowing to add third party membership schemes.
 
 2. Copy following JAR files to the repository/components/lib directory of the Carbon server:
 
-```
-jackson-core-2.5.4.jar
-jackson-databind-2.5.4.jar
-jackson-annotations-2.5.4.jar
-kubernetes-mscheme-carbon42-<version>.jar
-```
+   ```
+      jackson-core-2.5.4.jar
+      jackson-databind-2.5.4.jar
+      jackson-annotations-2.5.4.jar
+      kubernetes-mscheme-carbon42-<version>.jar
+   ```
 
 3. Update axis2.xml with the following configuration:
 
-```
-<clustering class="org.wso2.carbon.core.clustering.hazelcast.HazelcastClusteringAgent" enable="true">
-    <parameter name="membershipScheme">kubernetes</parameter>
-    <parameter name="KUBERNETES_MASTER">http://172.17.8.101:8080</parameter>
-    <parameter name="KUBERNETES_SERVICES">wso2esb</parameter>
-    <parameter name="KUBERNETES_NAMESPACE">default</parameter>
-</clustering>
+   ```
+   <clustering class="org.wso2.carbon.core.clustering.hazelcast.HazelcastClusteringAgent" enable="true">
+      <parameter name="membershipScheme">kubernetes</parameter>
+      <parameter name="KUBERNETES_MASTER">http://172.17.8.101:8080</parameter>
+      <parameter name="KUBERNETES_SERVICES">wso2esb</parameter>
+      <parameter name="KUBERNETES_NAMESPACE">default</parameter>
+   </clustering>
 ```
 
